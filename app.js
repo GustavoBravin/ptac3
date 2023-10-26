@@ -20,13 +20,13 @@ const produtos = [
 ]
 
 app.get('/', (req, res) => {
-  res.render('index', { message: 'Olá, Mundo!' });
+  res.render('index', { message: 'Lojinha ' });
 });
 app.get('/produto', (req, res) => {
-  res.render('produto', { message: 'Bem Vindo!' });
+  res.render('produto', { message: '' });
 });
 app.get('/ver', (req, res) => {
-  res.render('ver', { message: 'Bem Vindo!' });
+  res.render('ver', { message: '' });
 });
 
 app.listen(port, () => {

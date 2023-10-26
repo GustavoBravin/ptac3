@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;	
+    }
+    
+    img{
+    width: 50%;
+    height: 50%;
+    }
+    html{
+    background-color: #393939;
+    
+    }
+    header{
+        height: 100px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    header h1{
+    font-family: Georgia, Times, serif;
+    color: white;
+    }
+     
+.borda img{
+    margin-bottom: 100px;
+} 
+
+    
+.caixa{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: aliceblue;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+button{
+    background-color: rgb(0, 0, 0);
+    display: inline-block;
+    height: 50px;
+    width: 100px;
+    color: aliceblue;
+    margin-top: 15px;
+}
+
+
+    
+    
+    
+    
+    
