@@ -37,10 +37,12 @@ color: white;
 	justify-content: center;
 	text-align: center;
     text-decoration-color: white;
+	text-overflow: inherit;
 }
 
+
 .caixa{
-	display: flex;
+	display: inline-block;
 	justify-content: space-around;
 	align-items: center;
 	align-content:center;
