@@ -6,7 +6,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 const produtos = [
-  {id:1 , nome:"Bola",preço: 10, imagem:"bola.png"},
+  {id:1 , nome:"Bolinha",preço: 10, imagem:"bola.png"},
   {id:2 , nome:"Bola amarela",preço: 15, imagem:"bola amarela.png"},
   {id:3 , nome:"Bola verde",preço: 11, imagem:"bola verde.jpg"},
   {id:4 , nome:"Bola azul",preço: 12, imagem:"bola azul.jpg"},
@@ -21,7 +21,8 @@ const produtos = [
 
 
 function buscarProdutoPorId(id) {
-  const produto = produtos.find(produto => produto.id = id) ;
+  console.log(id)
+  const produto = produtos.find(produto => produto.id = id);
   return produto || null
 }
 
@@ -29,13 +30,11 @@ function buscarProdutoPorId(id) {
 app.get('/', (req, res) => {
   res.render('index', { produtos });
 });
-app.get('/produto', (req, res) => {
-  res.render('produto', { message: '' });
+app.get('/produto/:id', (req, res) => {
+  const produto = buscarProdutoPorId(req.params.id)
+  console.log(produto)
+  res.render('produto', {produto});
 });
-app.get('/ver', (req, res) => {
-  res.render('ver', { message: '' });
-});
-
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });

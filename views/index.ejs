@@ -5,23 +5,26 @@
   <link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
-   <div class="caixa">
+
   <%  for (let produto of produtos) { %>
- <a href=>
+   <div class="caixa">
+  
  
+    <a href="/produto/<%=produto.id %>">
   <div class="borda">
+  
     <h2><%=produto.nome%></h2>
     <img src="/img/<%=produto.imagem%>" alt="Uma bola macia e confortavel">
-    <div class="borda" >
+    
       <p><%=produto.preço%></p>
-    </div>
+
    <button>VER</button>
   </div>
 </a>
+
+
 </div>
 <% }  %>
-
-
   
 
 <footer>
